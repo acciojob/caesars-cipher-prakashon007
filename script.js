@@ -32,16 +32,16 @@ const lookup = {
 };
 let A = "A".charCodeAt(0);
 let Z = "Z".charCodeAt(0);
-function rot13(Str) {
+function rot13(str) {
   let ans="";
 	
-	for(let i=0;i<Str.length;i++){
-		let curr = Str[i].charCodeAt(0);
+	for(let i=0;i<str.length;i++){
+		let curr = str[i].charCodeAt(0);
 		if(curr<=Z &&curr>=A){
-			ans+=lookup[Str[i]]
+			ans+=lookup[str[i]]
 		}
 		else{
-			ans+=Str[i];
+			ans+=str[i];
 		}
 		
 	}
