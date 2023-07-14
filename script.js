@@ -30,12 +30,25 @@ const lookup = {
   "?": "?",
   ",": ",",
 };
-
-function rot13(encodedStr) {
-  let decodedArr = []; // Your Result goes here
+let A = "A".charCodeAt(0);
+let Z = "Z".charCodeAt(0);
+function rot13(Str) {
+  let ans="";
+	
+	for(let i=0;i<str.lenght;i++){
+		let curr = str[i].charCodeAt(0);
+		if(curr<=Z &&curr>=A){
+			ans+=lookup[str[i]]
+		}
+		else{
+			ans+=str[i];
+		}
+		
+	}
+		// Your Result goes here
   // Only change code below this line
 
-  return; //return decodedArr
+  return ans; //return decodedArr
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
