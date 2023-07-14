@@ -35,7 +35,7 @@ let Z = "Z".charCodeAt(0);
 function rot13(Str) {
   let ans="";
 	
-	for(let i=0;i<switchtr.length;i++){
+	for(let i=0;i<Str.length;i++){
 		let curr = Str[i].charCodeAt(0);
 		if(curr<=Z &&curr>=A){
 			ans+=lookup[Str[i]]
